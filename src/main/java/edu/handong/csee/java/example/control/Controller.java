@@ -14,10 +14,15 @@ public class Controller {
 		
 		Controller nth413Controller = new Controller();
 		
-		nth413Controller.createProjectorAndScreen();
+		nth413Controller.runEveryActions();
+	}
+	
+	void runEveryActions(){
 		
-		nth413Controller.turnOnProjector();
-		nth413Controller.rollUpAndDownScreen();
+		createProjectorAndScreen();
+		turnOnProjector();
+		rollUpAndDownScreen();
+		turnOffProjector();
 		
 	}
 
@@ -31,6 +36,11 @@ public class Controller {
 		System.out.println("My project's description:" + nth413Projector.mDescription);
 		
 		nth413Projector.turnOn();
+	}
+	
+	void turnOffProjector() {
+		
+		nth413Projector.turnOff();
 	}
 	
 	void rollUpAndDownScreen() {
