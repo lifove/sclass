@@ -4,6 +4,9 @@ import edu.handong.csee.java.example.projection.Projector;
 import edu.handong.csee.java.example.projection.Screen;
 
 public class Controller {
+	
+	Projector nth413Projector;
+	Screen nth413Screen;
 
 	public static void main(String[] args) {
 		
@@ -11,23 +14,26 @@ public class Controller {
 		
 		Controller nth413Controller = new Controller();
 		
+		nth413Controller.createProjectorAndScreen();
+		
 		nth413Controller.turnOnProjector();
 		nth413Controller.rollUpAndDownScreen();
 		
 	}
 
-	public void turnOnProjector() {
-		
-		Projector nth413Projector = new Projector();
-		
+	void createProjectorAndScreen() {
+		nth413Projector = new Projector();
+		nth413Screen = new Screen();
+	}
+
+	void turnOnProjector() {
+
 		System.out.println("My project's description:" + nth413Projector.mDescription);
 		
 		nth413Projector.turnOn();
 	}
 	
-	public void rollUpAndDownScreen() {
-		
-		Screen nth413Screen = new Screen();
+	void rollUpAndDownScreen() {
 		
 		System.out.println("My screen's description:" + nth413Screen.mDescription);
 		
